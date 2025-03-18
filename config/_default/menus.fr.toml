@@ -11,24 +11,18 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
-  name = "A propos"
-  pageRef = "about"
-  weight = 10
+name = "A propos"
+pageRef = "about"
+weight = 10
 
 [[main]]
-  name = "Blog"
-  pageRef = "posts"
-  weight = 10
+name = "CV"
+pageRef = "resume"
 
 [[main]]
-  name = "CV"
-  pageRef = "resume"
-  weight = 15
-
-[[main]]
-  name = "Projets"
-  pageRef = "projects"
-  weight = 17 
+name = "Projets"
+pageRef = "projects"
+weight = 17
 
 # [[main]]
 #   name = "Tags"
@@ -36,13 +30,12 @@
 #   weight = 20
 
 
-
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
 # the copyright notice. Configure as per the main menu above.
 
 
- [[footer]]
-   name = "Tags"
-   pageRef = "tags"
-   weight = 10
+[[footer]]
+name = "Tags"
+pageRef = "tags"
+weight = 10
