@@ -1,10 +1,10 @@
-languageCode = "en"
-languageName = "English"
-weight = 1
+languageCode = "fr"
+languageName = "French"
+weight = 2
 title = "Justin's Blog"
 
 [params]
-displayName = "EN"
+displayName = "FR"
 isoCode = "en"
 rtl = false
 description = "My awesome website"
