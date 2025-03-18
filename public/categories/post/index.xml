@@ -2,18 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Post on Justin&#39;s Blog</title>
-    <link>//localhost:1313/categories/post/</link>
+    <link>/categories/post/</link>
     <description>Recent content in Post on Justin&#39;s Blog</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 18 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/categories/post/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2025 Justin De Sio</copyright>
+    <lastBuildDate>Tue, 18 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="/categories/post/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>Hello World!</title>
-      <link>//localhost:1313/posts/post-lite-one/</link>
+      <link>/posts/post-lite-one/</link>
       <pubDate>Tue, 18 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/post-lite-one/</guid>
+      
+      <guid>/posts/post-lite-one/</guid>
       <description>Test first post</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="/posts/post-lite-one/cover.png" />
     </item>
+    
   </channel>
 </rss>

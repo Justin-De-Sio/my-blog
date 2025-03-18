@@ -1,103 +1,113 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <url>
-    <loc>//localhost:1313/categories/blog/</loc>
+    <loc>/categories/blog/</loc>
     <lastmod>2025-03-18T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url><url>
-    <loc>//localhost:1313/categories/</loc>
-    <lastmod>2025-03-18T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="//localhost:1313/fr/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/categories/"
-                />
-  </url><url>
-    <loc>//localhost:1313/posts/post-lite-one/</loc>
-    <lastmod>2025-03-18T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>//localhost:1313/</loc>
+  </url>
+  <url>
+    <loc>/categories/</loc>
     <lastmod>2025-03-18T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="//localhost:1313/fr/"
-                />
+      rel="alternate"
+      hreflang="fr"
+      href="/fr/categories/"
+    />
     <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/"
-                />
-  </url><url>
-    <loc>//localhost:1313/categories/post/</loc>
+      rel="alternate"
+      hreflang="en"
+      href="/categories/"
+    />
+  </url>
+  <url>
+    <loc>/posts/post-lite-one/</loc>
     <lastmod>2025-03-18T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url><url>
-    <loc>//localhost:1313/tags/post/</loc>
-    <lastmod>2025-03-18T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>//localhost:1313/posts/</loc>
-    <lastmod>2025-03-18T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>//localhost:1313/tags/</loc>
+  </url>
+  <url>
+    <loc>/</loc>
     <lastmod>2025-03-18T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="//localhost:1313/fr/tags/"
-                />
+      rel="alternate"
+      hreflang="fr"
+      href="/fr/"
+    />
     <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/tags/"
-                />
-  </url><url>
-    <loc>//localhost:1313/authors/</loc>
+      rel="alternate"
+      hreflang="en"
+      href="/"
+    />
+  </url>
+  <url>
+    <loc>/categories/post/</loc>
+    <lastmod>2025-03-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>/tags/post/</loc>
+    <lastmod>2025-03-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2025-03-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2025-03-18T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="//localhost:1313/fr/authors/"
-                />
+      rel="alternate"
+      hreflang="fr"
+      href="/fr/tags/"
+    />
     <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/authors/"
-                />
-  </url><url>
-    <loc>//localhost:1313/series/</loc>
+      rel="alternate"
+      hreflang="en"
+      href="/tags/"
+    />
+  </url>
+  <url>
+    <loc>/authors/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="//localhost:1313/fr/series/"
-                />
+      rel="alternate"
+      hreflang="fr"
+      href="/fr/authors/"
+    />
     <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/series/"
-                />
+      rel="alternate"
+      hreflang="en"
+      href="/authors/"
+    />
+  </url>
+  <url>
+    <loc>/series/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="/fr/series/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="/series/"
+    />
   </url>
 </urlset>

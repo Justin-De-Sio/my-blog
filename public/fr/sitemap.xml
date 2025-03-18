@@ -1,75 +1,80 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <url>
-    <loc>//localhost:1313/fr/authors/</loc>
+    <loc>/fr/authors/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/authors/"
-                />
+      rel="alternate"
+      hreflang="en"
+      href="/authors/"
+    />
     <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="//localhost:1313/fr/authors/"
-                />
-  </url><url>
-    <loc>//localhost:1313/fr/categories/</loc>
+      rel="alternate"
+      hreflang="fr"
+      href="/fr/authors/"
+    />
+  </url>
+  <url>
+    <loc>/fr/categories/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/categories/"
-                />
+      rel="alternate"
+      hreflang="en"
+      href="/categories/"
+    />
     <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="//localhost:1313/fr/categories/"
-                />
-  </url><url>
-    <loc>//localhost:1313/fr/</loc>
+      rel="alternate"
+      hreflang="fr"
+      href="/fr/categories/"
+    />
+  </url>
+  <url>
+    <loc>/fr/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/"
-                />
+      rel="alternate"
+      hreflang="en"
+      href="/"
+    />
     <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="//localhost:1313/fr/"
-                />
-  </url><url>
-    <loc>//localhost:1313/fr/series/</loc>
+      rel="alternate"
+      hreflang="fr"
+      href="/fr/"
+    />
+  </url>
+  <url>
+    <loc>/fr/series/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/series/"
-                />
+      rel="alternate"
+      hreflang="en"
+      href="/series/"
+    />
     <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="//localhost:1313/fr/series/"
-                />
-  </url><url>
-    <loc>//localhost:1313/fr/tags/</loc>
+      rel="alternate"
+      hreflang="fr"
+      href="/fr/series/"
+    />
+  </url>
+  <url>
+    <loc>/fr/tags/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/tags/"
-                />
+      rel="alternate"
+      hreflang="en"
+      href="/tags/"
+    />
     <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="//localhost:1313/fr/tags/"
-                />
+      rel="alternate"
+      hreflang="fr"
+      href="/fr/tags/"
+    />
   </url>
 </urlset>

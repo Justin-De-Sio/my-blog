@@ -9,7 +9,7 @@ isoCode = "en"
 rtl = false
 description = "My awesome website"
 dateFormat = "2 January 2006"
-author = { name = "Justin De Si dsdso", image = "img/avatar.png", headline = "DevOps Engineer", bio = "The french guy", links = [
+author = { name = "Justin De Sio", image = "img/avatar.png", headline = "DevOps Engineer", bio = "The french guy", links = [
     { github = "https://github.com/justin-de-sio" },
     { linkedin = "https://www.linkedin.com/in/justin-de-sio/" },
 ] }

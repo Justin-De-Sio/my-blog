@@ -1,12 +1,15 @@
 languageCode = "fr"
 languageName = "French"
 weight = 2
-title = "Justin's Blog"
+title = "Le blog de Justin"
 
 [params]
 displayName = "FR"
 isoCode = "en"
 rtl = false
-description = "My awesome website"
+description = "Mon blog"
 dateFormat = "2 January 2006"
-author = { name = "Justin De Sio", image = "img/avatar.png", headline = "DevOps Engineer", bio = "The french guy", links = [ { github = "https://github.com/justin-de-sio" }, { linkedin = "https://www.linkedin.com/in/justin-de-sio/" } ] }
+author = { name = "Justin De Sio", image = "img/avatar.png", headline = "Ingénieur DevOps", bio = "Ingénieur chez Cloud Temple", links = [
+    { github = "https://github.com/justin-de-sio" },
+    { linkedin = "https://www.linkedin.com/in/justin-de-sio/" },
+] }
