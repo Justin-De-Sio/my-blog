@@ -15,10 +15,6 @@ name = "A propos"
 pageRef = "about"
 weight = 10
 
-[[main]]
-name = "CV"
-pageRef = "resume"
-weight = 15
 
 [[main]]
 name = "Projets"
