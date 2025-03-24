@@ -1,7 +1,7 @@
 languageCode = "fr"
 languageName = "French"
 weight = 2
-title = "Le blog de Justin"
+title = "JustInTimeOps"
 
 [params]
 displayName = "FR"
