@@ -39,7 +39,7 @@ Let me cook.
                 Comming soon
               {{< /badge >}}
             </td>
-            <td>My homelab where I run my services.</td>
+            <td>My homelab where I host my services.</td>
             <td><a target="_blank" href=""></a></td>
         </tr>
          <tr>

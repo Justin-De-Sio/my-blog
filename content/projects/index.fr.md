@@ -39,7 +39,7 @@ Let me cook.
                 Bientôt disponible
               {{< /badge >}}
             </td>
-            <td>Mon homelab où j'exécute mes propres services.</td>
+            <td>Mon homelab où j'héberge mes propres services.</td>
             <td><a target="_blank" href=""></a></td>
         </tr>
          <tr>
