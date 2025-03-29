@@ -1,9 +1,10 @@
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "JustInTimeOps"
+title = "JustinOps"
 
 [params]
+# logo = "img/logo.png"
 displayName = "EN"
 isoCode = "en"
 rtl = false

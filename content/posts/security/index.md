@@ -40,19 +40,31 @@ Honestly, it felt like a mini incident response drill—but with my digital life
 
 Looking back, the source wasn’t some 0-day exploit or high-level APT magic.
 
-It was just... **a dumb decision**: launching a suspicious program without verifying its source.
+It was just... **a dumb decision**: launching a suspicious camera program on my gaming PC without verifying its source.
 
-A moment of laziness. One slip. One click.
+I was tired. Not in the right mindset. I didn’t take the time to analyze the program properly.
 
-It was enough.
+Turned out, it was spyware. It siphoned off a ton of data from my system.
 
 ---
 
-### 🧰 Phase 3: Rebuilding Like a DevSecOps Nerd
+### 🧪 Phase 2.5: Triage and Discovery
 
-Once the fire was out, I went full DevSecOps on my personal infrastructure.
+While investigating, I:
 
-Here's what I did—and what you can do **before** you get owned:
+- Checked unusual logins and session history
+- Analyzed suspicious processes and outbound network traffic
+- Found indicators pointing to a malicious payload bundled in the program
+
+That’s when the reality hit hard.
+
+---
+
+### 🧰 Phase 3: Rebuilding Like a SecOps Nerd
+
+Once the fire was out, I approached my rebuild like I was setting up a reliable production environment.
+
+Here’s what I did—and what you can do before you get owned:
 
 #### 🛑 1. Isolation and Reset
 
@@ -68,26 +80,29 @@ Here's what I did—and what you can do **before** you get owned:
 
 #### 🧱 3. Network Hygiene
 
-- Blocked all outbound by default on my router for new devices.
+- Blocked all outbound traffic by default for new devices on my router.
 - Monitored unknown IPs hitting my home network.
 - Set up custom DNS over HTTPS.
 
 #### 🧠 4. Mental Model Shift
 
 Before the hack, I _thought_ security was just checklists.
-After the hack, I saw it as **a mindset**—constant vigilance, minimal trust, and reducing blast radius.
+After the hack, I saw it as **a mindset**: constant vigilance, minimal trust, and reducing blast radius.
 
 ---
 
 ### 🧠 What I Learned (So You Don’t Have To)
 
-Here’s what this incident burned into my brain:
+This experience taught me more than any training ever could:
 
-- **Don't mix personal and work stuff.** Seriously. Keep them on separate browsers, profiles, devices—whatever it takes.
+- **Don't mix personal and work stuff.** Use separate browsers, profiles, or even machines.
 - **Your email is your crown jewel.** If it falls, everything else collapses.
 - **2FA is non-negotiable.** Make it annoying for attackers. You’ll thank yourself later.
-- **If it feels sketchy, it probably is.** Trust that gut instinct before double-clicking that `.exe`.
+- **If it feels sketchy, it probably is.** Trust your gut before double-clicking that `.exe`.
 - **Backups are not optional.** If you're not testing them, you’re not backing up.
+- **Traceability is crucial.** Know what systems and devices are part of your infrastructure. Log everything.
+- **Protect the keys to the kingdom.** For personal setups, this means your primary email, password manager, and router access.
+- **Talk to your employer ASAP.** I delayed informing mine, worried about credibility. But when I did, my manager and the security team were supportive. No legal consequences—just a reminder that transparency is more important than ego.
 
 ---
 
@@ -100,16 +115,19 @@ Then don’t treat your personal digital life like a test server from 2009.
 The breach sucked. But honestly?
 It made me **sharper, more aware, and more serious** about my own system's resilience.
 
+I now test unknown tools in a **dedicated sandbox environment**, and I always ask: _what happens if this thing goes rogue?_
+
 So yeah, I got hacked. But now I run my digital life like a sysadmin who’s been burned once—and never again.
 
 ---
 
-### 🧭 Want to secure your own setup?
+### 🧭 Want to Secure Your Own Setup?
 
 - Start with a **personal threat model**. What do you care about losing? What’s valuable to you?
 - Build **layers**: password manager, 2FA, hardware tokens, sandboxing, and monitoring.
 - Keep it **lean**. The less software, the smaller the surface.
 - **Automate** your backups, updates, and alerts.
+- Always assume compromise is possible. Plan accordingly.
 
 Security isn’t about paranoia.
 It’s about preparation.
