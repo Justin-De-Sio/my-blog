@@ -21,7 +21,7 @@ But this isn’t a story of failure. It’s the story of what happened next. And
 
 ---
 
-### 🧨 Phase 1: The Breakdown
+### Phase 1: The Breakdown
 
 The symptoms showed up fast:
 
@@ -36,7 +36,7 @@ Honestly, it felt like a mini incident response drill—but with my digital life
 
 ---
 
-### 🔍 Phase 2: The Root Cause
+### Phase 2: The Root Cause
 
 Looking back, the source wasn’t some 0-day exploit or high-level APT magic.
 
@@ -48,7 +48,7 @@ Turned out, it was spyware. It siphoned off a ton of data from my system.
 
 ---
 
-### 🧪 Phase 2.5: Triage and Discovery
+### Phase 2.5: Triage and Discovery
 
 While investigating, I:
 
@@ -60,38 +60,38 @@ That’s when the reality hit hard.
 
 ---
 
-### 🧰 Phase 3: Rebuilding Like a SecOps Nerd
+### Phase 3: Rebuilding Like a SecOps Nerd
 
 Once the fire was out, I approached my rebuild like I was setting up a reliable production environment.
 
 Here’s what I did—and what you can do before you get owned:
 
-#### 🛑 1. Isolation and Reset
+#### 1. Isolation and Reset
 
 - Disconnected everything.
 - Nuked and paved the system.
 - Reinstalled everything from scratch with a **minimalist mindset**.
 
-#### 🔐 2. Hardened Identity Management
+#### 2. Hardened Identity Management
 
 - Separated personal vs. semi-professional vs. sensitive accounts.
 - Rotated _every_ password (thank you, password manager).
 - Switched to **2FA everywhere**, and not just SMS.
 
-#### 🧱 3. Network Hygiene
+#### 3. Network Hygiene
 
 - Blocked all outbound traffic by default for new devices on my router.
 - Monitored unknown IPs hitting my home network.
 - Set up custom DNS over HTTPS.
 
-#### 🧠 4. Mental Model Shift
+#### 4. Mental Model Shift
 
 Before the hack, I _thought_ security was just checklists.
 After the hack, I saw it as **a mindset**: constant vigilance, minimal trust, and reducing blast radius.
 
 ---
 
-### 🧠 What I Learned (So You Don’t Have To)
+### What I Learned (So You Don’t Have To)
 
 This experience taught me more than any training ever could:
 
@@ -106,7 +106,7 @@ This experience taught me more than any training ever could:
 
 ---
 
-### 🧪 TL;DR: Treat Your Personal Stack Like a Production Environment
+### TL;DR: Treat Your Personal Stack Like a Production Environment
 
 Would you deploy a production app without CI/CD, monitoring, RBAC, and secrets management?
 
@@ -121,7 +121,7 @@ So yeah, I got hacked. But now I run my digital life like a sysadmin who’s bee
 
 ---
 
-### 🧭 Want to Secure Your Own Setup?
+### Want to Secure Your Own Setup?
 
 - Start with a **personal threat model**. What do you care about losing? What’s valuable to you?
 - Build **layers**: password manager, 2FA, hardware tokens, sandboxing, and monitoring.
