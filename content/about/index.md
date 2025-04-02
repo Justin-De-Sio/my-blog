@@ -19,7 +19,7 @@ showAuthor: true
 layoutBackgroundHeaderSpace: false
 ---
 
-Hi, I'm Justin! I'm passionate about technology, always eager to learn and try new things. Recently, I've been building a homelab focused on Kubernetes, where I enjoy tackling real-world enterprise-level challenges and boosting my tech skills.
+Hi, I'm Justin! I'm passionate about technology, always enthusiast to learn and try new things. Recently, I've been building a homelab focused on Kubernetes, where I enjoy tackling real-world enterprise-level challenges and boosting my tech skills.
 
 I also love creating simple yet practical SaaS projects inspired by everyday problems. Lately, blockchain and DeFi have grabbed my attention—I find it fascinating how these technologies can change how we manage money and interact economically.
 
