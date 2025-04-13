@@ -36,11 +36,11 @@ Let me cook.
             <td>
               Homelab
               {{< badge >}}
-                Comming soon
+                Active
               {{< /badge >}}
             </td>
             <td>My homelab where I host my services.</td>
-            <td><a target="_blank" href=""></a></td>
+            <td><a target="_blank" href="https://github.com/Justin-De-Sio/homelab">GitHub repo</a></td>
         </tr>
          <tr>
             <td><img class="customEntitityAlbum" style="background-color:transparent" src="hugo.png"/></td>

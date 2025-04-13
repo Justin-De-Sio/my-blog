@@ -4,7 +4,7 @@ summary: "Getting hacked wasn’t part of my weekend plan—but fixing the damag
 categories: ["Post", "Blog"]
 tags: ["cybersecurity", "personal-infrastructure", "infosec", "post"]
 date: 2025-03-28
-draft: false
+draft: true
 ---
 
 It started with a weird security notification.

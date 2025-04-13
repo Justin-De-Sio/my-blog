@@ -40,7 +40,7 @@ Let me cook.
               {{< /badge >}}
             </td>
             <td>Mon homelab où j'héberge mes propres services.</td>
-            <td><a target="_blank" href=""></a></td>
+            <td><a target="_blank" href="https://github.com/Justin-De-Sio/homelab">GitHub repo</a></td>
         </tr>
          <tr>
             <td><img class="customEntitityAlbum" style="background-color:transparent" src="hugo.fr.png"/></td>
