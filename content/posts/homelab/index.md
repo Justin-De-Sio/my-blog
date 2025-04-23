@@ -33,3 +33,8 @@ Ma stack actuelle me permet d'avancer vite tout en gardant un max de flexibilit�
 
 J'ai déjà appris qu'il vaut parfois mieux **commencer simple** plutôt que de se lancer direct sur des solutions trop spécialisées comme Talos.  
 Tout dépend de l'objectif : **prod solide** ou **apprentissage pratique**.
+
+## 🔗 Repo Git
+
+Tout mon homelab est versionné ici :  
+{{< github repo="Justin-De-Sio/homelab" >}}
