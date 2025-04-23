@@ -48,7 +48,7 @@ Il faut adapter l’outil à son objectif : **production robuste** ou **expérim
 
 ---
 
-## 🔗 Repo Git
+## Repo Git
 
 Tout est versionné ici si tu veux jeter un œil ou t’en inspirer :  
 {{< github repo="justin-de-sio/homelab" >}}
