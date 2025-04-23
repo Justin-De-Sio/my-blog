@@ -31,6 +31,10 @@ Est-ce que c’est aux normes ? Absolument pas.
 Est-ce que c’est dangereux ? Probablement.  
 Est-ce que j’en suis fier ? Carrément. 🔥😎
 
+Le serveur est connecté à un petit switch TP-Link 5 ports 1 Gbit/s, relié à mon routeur qui se trouve environ 5 mètres plus loin.
+Grâce à ça, je peux brancher proprement le homelab, la TV et le player Free, sans monopoliser tous les ports de ma box.
+Le tout tient dans le même meuble, c’est discret, pratique… et franchement satisfaisant.
+
 ---
 
 ## Retour d’expérience  
