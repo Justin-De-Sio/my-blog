@@ -1,54 +1,51 @@
 ---
-title: "Mon Homelab"
-summary: "Un serveur dans mon meuble TV, des containers partout, et du GitOps pour tout piloter"
+title: "My homelab"
+summary: "One server crammed in a TV stand, containers running wild, and GitOps keeping everything under control."
 categories: ["Post", "Blog"]
 date: 2025-04-23
 draft: false
 repo: "https://github.com/justin-de-sio/homelab"
 ---
 
-Ça faisait un moment que je voulais me lancer dans un homelab pour concrétiser mes projets perso.  
-J'avais des vieux composants qui traînaient, alors je me suis dit : pourquoi pas les recycler pour monter un petit serveur maison ?
+It has been a while since I wanted to start a homelab to work on my personal projects.  
+I had some old hardware lying around, so I figured, why not recycle it to build a little home server?
 
-L'idée : faire tourner un cluster Kubernetes avec quelques apps auto-hébergées, le tout dans une approche **DevSecOps** et **GitOps**.  
-Je vais utiliser **Flux CD** et **Helm** pour gérer mes déploiements et tout automatiser proprement dès le départ.
+The idea was to run a Kubernetes cluster with some self-hosted apps, following a **DevSecOps** and **GitOps** mindset.  
+I will use **Flux CD** and **Helm** to manage my deployments and automate everything properly from the start.
 
 ---
 
-## Spécifications  
-- **Processeur :** Intel i5-7600K 4.2GHz, 4 cœurs  
-- **Mémoire :** 8 Go de RAM DDR4  
-- **Stockage :** 500 Go en SSD NVMe  
-- **Réseau :** 1 Gbit/s
+## Specification  
+- **Processor:** Intel i5-7600K 4.2GHz, 4 cores  
+- **Memory:** 8 GB DDR4 RAM  
+- **Storage:** 500 GB NVMe SSD  
+- **Network:** 1 Gbps  
+- **Case:** Nothing 
 
 ---
 
 ## Setup  
-![photo du setup :D](homelab.jpeg)  
-Oui, c’est bien un serveur coincé dans une étagère TV.  
-Oui, ça chauffe un peu.  
-Est-ce que c’est aux normes ? Absolument pas.  
-Est-ce que c’est dangereux ? Probablement.  
-Est-ce que j’en suis fier ? Carrément. 🔥😎
+Yes, that's a server crammed into a TV shelf.  
+Yes, it gets a little hot.  
+Is it up to code? Absolutely not.  
+Is it safe? Probably not.  
+Am I proud? Hell yeeeah. 🔥😎
 
-Le serveur est connecté à un petit switch TP-Link 5 ports 1 Gbit/s, relié à mon routeur qui se trouve environ 5 mètres plus loin.
-Grâce à ça, je peux brancher proprement le homelab, la TV et le player Free, sans monopoliser tous les ports de ma box.
-Le tout tient dans le même meuble, c’est discret, pratique… et franchement satisfaisant.
-
----
-
-## Retour d’expérience  
-
-J’ai installé **Ubuntu Server** et **K3s** sur la machine.  
-Au départ, j’avais testé **Talos Linux**, mais je l’ai trouvé trop rigide et abstrait pour bien apprendre.  
-Ma stack actuelle me permet d’avancer rapidement tout en gardant un maximum de flexibilité.
-
-J’ai déjà compris une leçon importante : parfois, **commencer simple**, c’est la meilleure façon d’apprendre.  
-Il faut adapter l’outil à son objectif : **production robuste** ou **expérimentation agile**.
+The server is connected to a small switch linked to my router about 5 meters away.  
+Thanks to that, I can properly hook up my homelab, TV, and Freebox Player without monopolizing all the ports on my router.  
+Everything fits into the same piece of furniture — it's discreet, practical, and budget-friendly.
 
 ---
 
-## Repo Git
+## Experience feedback  
+I installed **Ubuntu Server** and **K3s** on the machine.  
+At the beginning, I had set up **Talos Linux**, a production-grade Kubernetes-focused distribution. But I found it too strict and abstract for learning purposes.  
+My current stack with **Ubuntu Server** and **K3s** allows me to move forward smoothly while keeping great flexibility.
 
-Tout est versionné ici si tu veux jeter un œil ou t’en inspirer :  
+I've already learned an important lesson: sometimes, **starting simple** is the best way to learn.
+
+---
+
+## Git Repo  
+Everything is versioned here if you want to take a look or get inspired:  
 {{< github repo="justin-de-sio/homelab" >}}
