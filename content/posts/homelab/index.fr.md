@@ -15,24 +15,25 @@ Je vais utiliser **Flux CD** et **Helm** pour gérer mes déploiements et tout a
 
 ---
 
-## Spécifications  
+## Construction du Homelab
+
 - **Processeur :** Intel i5-7600K 4.2GHz, 4 cœurs  
 - **Mémoire :** 8 Go de RAM DDR4  
 - **Stockage :** 500 Go en SSD NVMe  
-- **Réseau :** 1 Gbit/s
+- **Réseau :** 1 Gbit/s  
+- **Boîtier :** Aucun — juste de la puissance brute
 
----
 
-## Setup  
-![photo du setup :D](homelab.jpeg)  
+![photo du setup :D](homelab.jpeg)
+
 Oui, c’est bien un serveur coincé dans une étagère TV.  
 Oui, ça chauffe un peu.  
 Est-ce que c’est aux normes ? Absolument pas.  
 Est-ce que c’est dangereux ? Probablement.  
 Est-ce que j’en suis fier ? Carrément. 🔥😎
 
-Le serveur est connecté à un petit switch TP-Link 5 ports 1 Gbit/s, relié à mon routeur qui se trouve environ 5 mètres plus loin.
-Grâce à ça, je peux brancher proprement le homelab, la TV et le player Free, sans monopoliser tous les ports de ma box.
+Le serveur est connecté à un petit switch TP-Link 5 ports 1 Gbit/s, relié à mon routeur qui se trouve environ 5 mètres plus loin.  
+Grâce à ça, je peux brancher proprement le homelab, la TV et le player Free, sans monopoliser tous les ports de ma box.  
 Le tout tient dans le même meuble, c’est discret, pratique… et franchement satisfaisant.
 
 ---

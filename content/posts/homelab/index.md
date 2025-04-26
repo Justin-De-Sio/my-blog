@@ -1,5 +1,5 @@
 ---
-title: "My homelab"
+title: "Homelab Adventures: The Beginning"
 summary: "One server crammed in a TV stand, containers running wild, and GitOps keeping everything under control."
 categories: ["Post", "Blog"]
 date: 2025-04-23
@@ -15,16 +15,16 @@ I will use **Flux CD** and **Helm** to manage my deployments and automate everyt
 
 ---
 
-## Specification  
+## Building the Homelab
+
 - **Processor:** Intel i5-7600K 4.2GHz, 4 cores  
 - **Memory:** 8 GB DDR4 RAM  
 - **Storage:** 500 GB NVMe SSD  
 - **Network:** 1 Gbps  
-- **Case:** Nothing 
+- **Case:** None — just raw power
 
----
+![Photo of my server](homelab.jpeg)
 
-## Setup  
 Yes, that's a server crammed into a TV shelf.  
 Yes, it gets a little hot.  
 Is it up to code? Absolutely not.  
@@ -38,6 +38,7 @@ Everything fits into the same piece of furniture — it's discreet, practical, a
 ---
 
 ## Experience feedback  
+
 I installed **Ubuntu Server** and **K3s** on the machine.  
 At the beginning, I had set up **Talos Linux**, a production-grade Kubernetes-focused distribution. But I found it too strict and abstract for learning purposes.  
 My current stack with **Ubuntu Server** and **K3s** allows me to move forward smoothly while keeping great flexibility.
@@ -47,5 +48,6 @@ I've already learned an important lesson: sometimes, **starting simple** is the 
 ---
 
 ## Git Repo  
+
 Everything is versioned here if you want to take a look or get inspired:  
 {{< github repo="justin-de-sio/homelab" >}}
