@@ -9,20 +9,29 @@ date: 2025-03-18
 draft: false
 ---
 
-### Intro
+Honestly, who wakes up thinking, _"Hey, what if I spent my Sunday suffering on purpose in front of a terminal, trying to install a super minimalist Linux distribution?"_ 😵‍💫
 
-Honestly, who wakes up thinking, _"Hey, what if I spent my Sunday willingly suffering in front of a terminal to install an ultra-minimalist Linux distribution?"_ 😵‍💫
+Arch Linux is like the "extreme sport" of the open-source world: if you miss one step, you can start all over again. Nothing is automated, everything is manual, and the interface... well, it doesn't exist.  
+The result? You spend more time on the Wiki than watching Netflix.  
+But believe it or not, this "masochistic" approach is also one of the best learning experiences I’ve ever had.
 
-Arch Linux is a bit like the _"extreme sport"_ option in the open-source world: miss a single step, and you're back to square one. Nothing is automated, everything is manual, and the interface is... well, non-existent. The result? You spend more time browsing the Wiki than watching Netflix. Yet, believe it or not, this masochistic approach is also one of the most formative experiences I've ever had.
+Behind this digital torture, there are real educational benefits if you really want to build a strong foundation. Here's how diving into difficulty helped me grow:
 
-Behind this digital self-torture lies some genuine educational benefits if you're looking to solidify your foundations. Here's how voluntarily plunging into this complexity has helped me grow:
+## Understanding the system’s foundations 🔍
+First of all, Arch Linux forces you to pay attention to every single installation detail.  
+It’s far from "click next and forget" distributions… looking at you, Ubuntu! 👀  
+Here, it's more like building IKEA furniture without any instructions: you put every piece together yourself and eventually figure out where those mysterious drafts are coming from 🛠️.
 
-### Understanding the foundations of the system 🔍
+## Strengthening security 🔒
+On Arch, you quickly realize that security isn’t just about clicking "Enable" and hoping for the best 🙏.  
+Since you build the whole system from scratch, you can set up customized protections right from the start.  
+Personally, I went for partition encryption with LVM LUKS — to protect my data while keeping flexibility.  
+The result: you secure your machine much better by tweaking every configuration yourself.
 
-First and foremost, Arch Linux compels you to pay attention to every installation detail. It's worlds apart from "turnkey" distributions where you merely click "Next" repeatedly... I'm looking at you, Ubuntu!
+## Choosing lightness and customization 🎨
+The KISS ("Keep It Simple, Stupid") philosophy also applies to your system’s essential services.  
+By installing only what you need, you control everything — from startup to networking — and avoid unnecessary clutter.  
+In the end, you get a system that’s as light and reliable as a Swiss watch ⏱️.
 
-Here, it's akin to assembling IKEA furniture without instructions: each brick you place yourself helps you grasp exactly why there's a draft coming from somewhere unexpected 🛠️.
-
-### Enhancing security awareness 🔒
-
-On Arch, you quickly realize security isn't something you just "activate" and hope for the best 🙏. Since you're building the system from scratch, you have the opportunity to configure security measures precisely from the outset. Personally, I've chosen several...
+Today, I have a system that simply works (and that’s already a big win! 👍).  
+Even though it was frustrating at times, it was an incredibly valuable experience — and I totally recommend it.
