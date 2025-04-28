@@ -1,6 +1,6 @@
 ---
 title: "Why I Spent My Sunday Struggling with Arch Linux (and Loved It)"
-summary: "Diving into Arch Linux felt like assembling IKEA furniture without instructions—painful at first, but each struggle turned into valuable technical wisdom."
+summary: ""
 categories: ["Post", "Blog"]
 tags: ["post"]
 #externalUrl: ""

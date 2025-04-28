@@ -1,7 +1,7 @@
 ---
 
 title: "Pourquoi j'ai passé mon dimanche à galérer sur Arch Linux (et pourquoi j'ai adoré)"
-summary: "Plonger dans Arch Linux, c'est un peu comme monter un meuble IKEA sans notice : douloureux au début, mais chaque difficulté se transforme en vraie leçon technique."
+summary: ""
 categories: ["Post", "Blog"]
 tags: ["post"]
 #externalUrl: ""
