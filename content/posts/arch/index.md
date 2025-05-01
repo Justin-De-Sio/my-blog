@@ -1,6 +1,6 @@
 ---
 title: "Why I Spent My Sunday Struggling with Arch Linux (and Loved It)"
-summary: ""
+summary: " "
 categories: ["Post", "Blog"]
 tags: ["post"]
 #externalUrl: ""
