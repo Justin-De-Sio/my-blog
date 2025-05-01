@@ -1,7 +1,8 @@
 ---
 
-title: "Pourquoi j'ai passé mon dimanche à galérer sur Arch Linux (et pourquoi j'ai adoré)"
-summary: " "
+title: "Pourquoi j'ai passé mon dimanche à galérer sur Arch Linux"
+#title: "Pourquoi j'ai passé mon dimanche à galérer sur Arch Linux (et pourquoi j'ai adoré)"
+summary: ""
 categories: ["Post", "Blog"]
 tags: ["post"]
 #externalUrl: ""

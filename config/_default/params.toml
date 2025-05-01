@@ -58,12 +58,12 @@ mainSections = ["posts"]
   showTaxonomies = false 
   showAuthorsBadges = false 
   showWordCount = true
-  showSummary = false
+  showSummary = true
   sharingLinks = [ "linkedin", "twitter" ] 
 [list]
   layoutBackgroundHeaderSpace = false
   showBreadcrumbs = false
-  showSummary = true
+  showSummary = false
   showTableOfContents = false
   showCards = true
   groupByYear = true
