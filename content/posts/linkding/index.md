@@ -223,5 +223,5 @@ In the next article, I’ll dive into **Monitoring & Observability** with **Prom
 
 ---
 
-**Explore the code**: [github.com/justindesio/homelab](https://github.com/justindesio/homelab)
+**Explore the code**: [github.com/justindesio/homelab](https://github.com/Justin-De-Sio/homelab)
 Feel free to clone, experiment, and open issues or PRs. Happy self-hosting! 🚀
