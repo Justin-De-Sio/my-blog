@@ -1,6 +1,6 @@
 
 ---
-title: "Step 1: Linkding – Production-Ready Deployment of My Homelab’s First App via GitOps"
+title: "Production-Ready Deployment of My Homelab’s First App via GitOps"
 summary: "How I deployed Linkding on a single-node K3s homelab using FluxCD, SOPS/Age and Cloudflare Tunnel."
 categories: ["Homelab"]
 tags: ["homelab","kubernetes","gitops","linkding","cloudflare-tunnel","sops"]
