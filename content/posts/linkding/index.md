@@ -4,8 +4,8 @@ title: "Production-Ready Deployment of My Homelab’s First App via GitOps"
 summary: "How I deployed Linkding on a single-node K3s homelab using FluxCD, SOPS/Age and Cloudflare Tunnel."
 categories: ["Homelab"]
 tags: ["homelab","kubernetes","gitops","linkding","cloudflare-tunnel","sops"]
-date: 2025-05-04
-draft: false
+date: 2025-05-08
+draft: true
 ---
 
 This article highlights how I deployed **Linkding**, my self-hosted bookmarking service, on a single-node K3s homelab with a GitOps mindset. No full tutorial here—just the key decisions, snippets and diagrams that show *what* I built and *why* it matters.
