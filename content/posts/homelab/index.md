@@ -50,4 +50,4 @@ I've already learned an important lesson: sometimes, **starting simple** is the 
 ## Git Repo  
 
 Everything is versioned here if you want to take a look or get inspired:  
-[See the GitHub repo 🚀](https://github.com/tonuser/tonrepo)
+[See the GitHub repo 🚀](https://github.com/Justin-De-Sio/homelab)

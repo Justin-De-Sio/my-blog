@@ -10,8 +10,21 @@ repo: "https://github.com/justin-de-sio/homelab"
 Ça faisait un moment que je voulais me lancer dans un homelab pour concrétiser mes projets perso.  
 J'avais des vieux composants qui traînaient, alors je me suis dit : pourquoi pas les recycler pour monter un petit serveur maison ?
 
-L'idée : faire tourner un cluster Kubernetes avec quelques apps auto-hébergées, le tout dans une approche **DevSecOps** et **GitOps**.  
-Je vais utiliser **Flux CD** et **Helm** pour gérer mes déploiements et tout automatiser proprement dès le départ.
+**Oui, je sais ce que certains vont penser : “Kubernetes pour un homelab ? Franchement, c’est un peu too much…”**  
+Et c’est vrai. C’est clairement overkill.  
+Mais c’est aussi *exactement pour ça* que je l’utilise.
+
+Je ne cherche pas à faire tourner trois conteneurs juste pour dire que ça marche.  
+Je veux me former aux outils qu’on utilise en **production réelle**, là où les contraintes sont sérieuses :  
+**scalabilité**, **haute disponibilité**, **observabilité**, **déploiements automatisés**, **sécurité dès la conception**, **récupération après incident**, **infra as code**…  
+Des environnements où tout doit être **prévisible, robuste et maintenable**, même à grande échelle.
+
+Kubernetes, dans ce cadre, c’est pas juste un orchestrateur :  
+c’est un terrain d’entraînement pour apprendre à concevoir des systèmes **efficaces, résilients et automatisés**.
+
+Tester, casser, versionner, documenter, observer le comportement d’une app sous contrainte :  
+tout ça, je peux le faire *chez moi*, à mon rythme, avec les bons outils.  
+**K3s, FluxCD, Helm, GitOps** — je les utilise ici **parce que je veux être à l’aise avec eux quand ce sera critique, pas juste en démo.**
 
 ---
 
@@ -41,7 +54,7 @@ Le tout tient dans le même meuble, c’est discret, pratique… et franchement 
 ## Retour d’expérience  
 
 J’ai installé **Ubuntu Server** et **K3s** sur la machine.  
-Au départ, j’avais testé **Talos Linux**, mais je l’ai trouvé trop rigide et abstrait pour bien apprendre.  
+Au départ, j’avais testé **Talos Linux** (un OS minimaliste ultra-sécurisé conçu pour Kubernetes), mais je l’ai trouvé trop rigide et abstrait pour bien apprendre.  
 Ma stack actuelle me permet d’avancer rapidement tout en gardant un maximum de flexibilité.
 
 S’il y a bien une chose que ce projet m’a appris, c’est que la simplicité est souvent le meilleur point de départ.
@@ -51,5 +64,5 @@ S’il y a bien une chose que ce projet m’a appris, c’est que la simplicité
 ## Repo Git
 
 Tout est versionné ici si tu veux jeter un œil ou t’en inspirer :  
-[Voir le dépôt GitHub 🚀](https://github.com/tonuser/tonrepo)
+[Voir le dépôt GitHub 🚀](https://github.com/Justin-De-Sio/homelab)
 
