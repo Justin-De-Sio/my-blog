@@ -63,7 +63,7 @@ sharingLinks = ["linkedin", "twitter"]
 [list]
 layoutBackgroundHeaderSpace = false
 showBreadcrumbs = false
-showSummary = false
+showSummary = true
 showTableOfContents = false
 showCards = true
 groupByYear = true

@@ -1,6 +1,6 @@
 ---
 title: "Why I Spent My Sunday Struggling with Arch Linux (and Loved It)"
-summary: ""
+summary : "Hey, what if I spent my Sunday suffering on purpose in front of a terminal, trying to install a super minimalist Linux distribution?" 
 categories: ["Post", "Blog"]
 tags: ["post"]
 #externalUrl: ""
