@@ -1,5 +1,6 @@
 ---
 title: "Automatiser la gestion complète des certificats sur des Ingress K8s avec cert-manager"
+summary: " "
 categories: ["Post", "Blog"]
 date: 2025-06-14
 draft: false
@@ -20,6 +21,8 @@ Mais dès qu’on passe sur un **cluster Kubernetes**, l’histoire change. Imag
 - Pas scalable sans scripts custom ou bricolages instables
 
 C’est là que **cert-manager** entre en jeu, et il change littéralement la donne.
+
+![cert-manager](featured3.png)
 
 ---
 
@@ -50,4 +53,45 @@ Pour générer mes certificats via Let’s Encrypt, il y avait deux options : le
 
 J’ai donc choisi DNS-01. Ce challenge fonctionne en publiant un enregistrement TXT dans la zone DNS du domaine. Comme mon domaine est géré chez Cloudflare, j’ai pu connecter cert-manager à leur API pour que tout soit fait automatiquement. 
 Une fois le solver DNS configuré, cert-manager s’occupe de tout : il crée les enregistrements, valide le challenge, génère le certificat, le stocke dans un Secret Kubernetes, et le renouvelle avant expiration. Je n’ai plus rien à faire.
-![Featured Image](featured1.png)
+
+---
+
+###  Obtention automatique d’un certificat TLS avec cert-manager et DNS-01
+{{< mermaid >}}
+sequenceDiagram
+    participant CM as cert-manager (Controller)
+    participant CF as Cloudflare (API DNS)
+    participant LE as Let’s Encrypt (ACME)
+    participant SEC as Secret TLS (Kubernetes)
+    participant ING as Ingress Controller (Traefik)
+
+    CM->>CF: Crée un enregistrement TXT 
+    LE->>CF: Vérifie l’enregistrement DNS
+    LE-->>CM: Validation réussie + envoi du certificat
+    CM->>SEC: Enregistre le certificat
+    ING->>SEC: Monte le certificat
+{{< /mermaid >}}
+
+---
+
+### Configuration du ClusterIssuer avec le solver Cloudflare
+
+Cette ressource `ClusterIssuer` permet à cert-manager de générer des certificats à l’échelle du cluster en s’appuyant sur Let’s Encrypt. Elle utilise le challenge DNS-01 avec l’API de Cloudflare pour valider la propriété du domaine.
+
+![YAML : ClusterIssuer avec Cloudflare DNS-01](featured4.png)
+
+---
+
+### Déploiement du certificat TLS pour le service de monitoring
+
+Ici, j’utilise Helm pour déployer la stack `kube-prometheus-stack`. L’Ingress est annoté pour indiquer à cert-manager d’utiliser mon `ClusterIssuer` précédemment défini (`letsencrypt-prod`). Le certificat sera stocké dans le Secret `monitoring-tls`, qui est ensuite utilisé automatiquement par l’Ingress pour activer le HTTPS.
+
+![YAML : Certificat TLS pour Grafana via cert-manager](featured5.png)
+
+---
+
+### Vérification du certificat généré
+
+Une fois en place, je peux vérifier que le certificat a bien été émis et stocké via `kubectl`. Le certificat est valide, actif, et sera renouvelé automatiquement avant son expiration.
+
+![Résultat de la commande kubectl get certificate](featured6.png)
