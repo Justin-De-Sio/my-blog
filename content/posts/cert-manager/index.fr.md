@@ -94,4 +94,4 @@ Ici, j’utilise Helm pour déployer la stack `kube-prometheus-stack`. L’Ingre
 
 Une fois en place, je peux vérifier que le certificat a bien été émis et stocké via `kubectl`. Le certificat est valide, actif, et sera renouvelé automatiquement avant son expiration.
 
-![Résultat de la commande kubectl get certificate](featured6.png)
+![Résultat de la commande kubectl get certificate](featured6.fr.png)
