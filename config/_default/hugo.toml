@@ -4,7 +4,7 @@
 
 theme = "blowfish"
 publishDir = "docs"
-baseURL = "https://funax.github.io/my-blog/"
+baseURL = "https://blog.justindesio.com/"
 defaultContentLanguage = "en"
 
 enableRobotsTXT = true

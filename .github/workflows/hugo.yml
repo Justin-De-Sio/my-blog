@@ -47,7 +47,7 @@ jobs:
         run: |
           hugo \
             --minify \
-            --baseURL "https://funax.github.io/my-blog/" \
+            --baseURL "https://blog.justindesio.com/" \
             --destination docs
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
