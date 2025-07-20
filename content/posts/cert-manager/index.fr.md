@@ -1,6 +1,6 @@
 ---
 title: "Automatiser la gestion complète des certificats sur des Ingress K8s avec cert-manager"
-summary: " "
+summary: "Fini les galères manuelles, place à un cycle de vie entièrement automatisé et compatible GitOps."
 categories: ["Post", "Blog"]
 date: 2025-06-14
 draft: false
