@@ -3,7 +3,8 @@
 # https://nunocoracao.github.io/blowfish/docs/getting-started/
 
 theme = "blowfish"
-# baseURL = "https://your_domain.com/"
+publishDir = "docs"
+baseURL = "https://funax.github.io/my-blog/"
 defaultContentLanguage = "en"
 
 enableRobotsTXT = true
