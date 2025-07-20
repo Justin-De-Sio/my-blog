@@ -47,11 +47,12 @@ jobs:
         run: |
           hugo \
             --minify \
-            --baseURL "https://blog.justindesio.com/"
+            --baseURL "https://funax.github.io/my-blog/" \
+            --destination docs
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: docs
 
   deploy:
     environment:
