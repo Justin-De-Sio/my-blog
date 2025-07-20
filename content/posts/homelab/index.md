@@ -5,6 +5,7 @@ categories: ["Post", "Blog"]
 date: 2025-04-23
 draft: false
 repo: "https://github.com/justin-de-sio/homelab"
+series: ["Homelab Chronicles"]
 ---
 
 It has been a while since I wanted to start a homelab to work on my personal projects.  
