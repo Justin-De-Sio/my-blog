@@ -396,52 +396,6 @@ resources:
     memory: "2Gi"    # Votre nouveau cluster a-t-il autant de mémoire ?
     cpu: "500m"
 ```
-
-## Les Métriques de Succès
-
-Quand votre bootstrap de cluster fraîchement installé fonctionne correctement, vous verrez :
-
-```bash
-❯ flux get kustomizations
-NAME                      READY   MESSAGE
-flux-system              True    Applied revision: main@sha1:abc123
-infrastructure-controllers True    Applied revision: main@sha1:abc123
-infrastructure-configs   True    Applied revision: main@sha1:abc123
-monitoring-controllers   True    Applied revision: main@sha1:abc123
-monitoring-configs       True    Applied revision: main@sha1:abc123
-apps                     True    Applied revision: main@sha1:abc123
-```
-
-Tout en vert, avec un séquençage de dépendances approprié et aucune intervention manuelle requise.
-
-## Leçons pour la Conception de Dépôt
-
-Si vous repartez de zéro (ou refactorisez un dépôt existant), concevez pour la portabilité dès le premier jour :
-
-### 1. Rendez les Dépendances Explicites
-Chaque kustomization devrait déclarer ses dépendances clairement.
-
-### 2. Séparez l'Installation de la Configuration
-Ne mélangez jamais les installations d'opérateurs avec leurs configurations.
-
-### 3. Documentez les Prérequis
-Maintenez un fichier `BOOTSTRAP.md` listant :
-- Les secrets requis
-- Les étapes de configuration manuelle
-- Les configurations spécifiques à l'environnement
-
-### 4. Testez Régulièrement
-Configurez un script pour tester le bootstrap de cluster fraîchement installé dans un environnement local :
-
-```bash
-#!/bin/bash
-# test-bootstrap.sh
-kind create cluster --name test-homelab
-flux bootstrap github --repository=homelab --path=clusters/test
-# ... étapes de validation
-kind delete cluster --name test-homelab
-```
-
 ## Le Bilan
 
 Les dépôts GitOps sont plus fragiles qu'ils n'en ont l'air. Vos configurations éprouvées au combat portent des présupposés cachés sur l'état du cluster, les CRDs disponibles, et le timing de déploiement. Un cluster fraîchement installé expose ces présupposés impitoyablement.

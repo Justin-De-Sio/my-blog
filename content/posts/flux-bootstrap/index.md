@@ -396,51 +396,6 @@ resources:
     cpu: "500m"
 ```
 
-## The Success Metrics
-
-When your fresh cluster bootstrap works correctly, you'll see:
-
-```bash
-❯ flux get kustomizations
-NAME                      READY   MESSAGE
-flux-system              True    Applied revision: main@sha1:abc123
-infrastructure-controllers True    Applied revision: main@sha1:abc123
-infrastructure-configs   True    Applied revision: main@sha1:abc123
-monitoring-controllers   True    Applied revision: main@sha1:abc123
-monitoring-configs       True    Applied revision: main@sha1:abc123
-apps                     True    Applied revision: main@sha1:abc123
-```
-
-All green, with proper dependency sequencing and no manual interventions required.
-
-## Lessons for Repository Design
-
-If you're starting fresh (or refactoring an existing repository), design for portability from day one:
-
-### 1. Make Dependencies Explicit
-Every kustomization should declare its dependencies clearly.
-
-### 2. Separate Installation from Configuration
-Never mix operator installations with their configurations.
-
-### 3. Document Prerequisites
-Maintain a `BOOTSTRAP.md` file listing:
-- Required secrets
-- Manual setup steps
-- Environment-specific configurations
-
-### 4. Test Regularly
-Set up a script to test fresh cluster bootstrap in a local environment:
-
-```bash
-#!/bin/bash
-# test-bootstrap.sh
-kind create cluster --name test-homelab
-flux bootstrap github --repository=homelab --path=clusters/test
-# ... validation steps
-kind delete cluster --name test-homelab
-```
-
 ## The Bottom Line
 
 GitOps repositories are more fragile than they appear. Your battle-tested configurations carry hidden assumptions about cluster state, available CRDs, and deployment timing. A fresh cluster exposes these assumptions mercilessly.
