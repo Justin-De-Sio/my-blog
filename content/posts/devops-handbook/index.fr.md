@@ -15,7 +15,7 @@ En lisant [*The DevOps Handbook*](https://www.amazon.fr/Devops-Handbook-World-cl
 
 ## Introduction 
 ### Le rôle clé du management et de la culture d'entreprise
-La transformation vers le DevOps n'est pas seulement une question de technologie, mais avant tout de culture et d'oganisation. Les outils déja sont présents, mais sans implication active du  management, les blocages persistent. Le vrai défi n’est donc pas technique : il est managérial.
+La transformation vers le DevOps n'est pas seulement une question de technologie, mais avant tout de culture et d'oganisation. Les outils sont  déja présents, mais sans implication active du  management, les blocages persistent. Le vrai défi n’est donc pas technique : il est managérial.
 Le management joue un rôle essentiel pour créer une culture de collaboration, briser les silos entre équipes, encourager l’expérimentation et aligner les objectifs techniques avec les objectifs business.
 
 ### DevOps n’est pas (seulement) l’automatisation
