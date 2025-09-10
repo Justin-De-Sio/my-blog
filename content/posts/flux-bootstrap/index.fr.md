@@ -1,5 +1,5 @@
 ---
-title: "Nouveau Matériel, Dépôt FluxCD Existant : Test de Réalité GitOps"
+title: "Bootstrap FluxCD : les pièges cachés d’un cluster fraîchement installé"
 date: 2025-07-18
 draft: false
 summary: "Ce que j'ai appris quand mon dépôt FluxCD parfaitement fonctionnel a rencontré un tout nouveau cluster Kubernetes - et pourquoi vos configurations GitOps existantes ne sont peut-être pas aussi portables que vous le pensez."
