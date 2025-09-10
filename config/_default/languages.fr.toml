@@ -10,7 +10,7 @@ isoCode = "en"
 rtl = false
 description = "Mon blog"
 dateFormat = "2 January 2006"
-author = { name = "Justin De Sio", image = "img/avatar.png", headline = "Ingénieur DevOps", bio = "Ingénieur de production chez Cloud Temple.", links = [
+author = { name = "Justin De Sio", image = "img/avatar.png", headline = "Ingénieur DevOps", bio = "Ingénieur DevOps", links = [
     { github = "https://github.com/justin-de-sio" },
     { linkedin = "https://www.linkedin.com/in/justin-de-sio/" },
 ] }
