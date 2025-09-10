@@ -11,6 +11,8 @@ draft: false
 
 En lisant [*The DevOps Handbook*](https://www.amazon.fr/Devops-Handbook-World-class-Reliability-Organizations/dp/1950508404/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=10VC45209RW6M&dib=eyJ2IjoiMSJ9.rD4eAOSqjLJjRabtUQwGIp3tnTZCkn8GNIzbwGyu8j_zz0aDPFjNfR1jwOs-7-JPt3Bd_71E32Haai0J2jf4yGdj2Oz69Lj5FpPujzJGryRrAXovFtvUz0VcI7Tqk6xV2Nrqp98m1Jmx9GQoLB12fRksBmLn0j09SwdWOr8p4kCbCpgr4Bx1jD_XwW7Qq7qWJ7ZUtNOVn8yWKRS4b9VJ6dmpQaeTOD-8atwoexBacpT2s1yUFFRtib0mCmD8gg5EjIiz-B_H-PcUTtsgx8zX0iUZBg4YpWaJ-WlN5HHgpc0.LlUTTwqzmEkTSK2xmhhycX7OXolaaZ9iZOZaL3rwCAo&dib_tag=se&keywords=The+DevOps+Handbook&qid=1757530245&sprefix=the+devops+handbook%2Caps%2C89&sr=8-1) de Gene Kim et ses co-auteurs, j’ai compris que DevOps va bien au-delà de l’automatisation et des outils. Ce livre met en lumière les principes fondamentaux qui permettent aux organisations de livrer plus vite, de manière plus fiable, tout en créant une culture d’apprentissage continu. Voici les idées principales que j’en retiens.
 
+![book](book.png)
+
 ## Introduction 
 ### Le rôle clé de la direction
 La transformation vers le DevOps n'est pas qu'une question de technologie. Le vrai obstacle est au niveau du management. Les outils sont présents, mais sans adhésion du management, les blocages persistent. Donc le défi managérial dans la plupart des entreprises n'est pas technique mais organisationnel.
@@ -34,7 +36,7 @@ Le livre introduit "les trois voies" en français, qui sont le socle du DevOps e
 
 ### Le flux
 
-![alt text](image.png)
+![flow](flow.png)
 
 Dans une chaîne de valeur, le travail va de gauche (développement) à droite (opérationnel), de la conception d'une fonctionnalité à son déploiement en production pour le client.
 
