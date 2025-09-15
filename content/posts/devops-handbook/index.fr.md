@@ -72,5 +72,14 @@ L’approche vise à réduire ces passations en :
 
 Cela permet d’améliorer le flux global en diminuant le temps que notre travail passe à attendre dans les files d’attente et en réduisant les erreurs de perte d'informations.
 
-#### Réduire les déchets
-#### Exterminer les contraintes
+#### Réduire les activités sans valeur ajoutée & Exterminer les contraintes
+Dans le livre Implementing Lean Software Development: From Concept to Cash, Mary et Tom Poppendieck décrivent les déchets et contraintes dans le processus de développement applicatif comme tout ce qui ralentit le projet, c’est-à-dire les activités qui n’apportent aucune valeur au résultat final.
+
+Ils y en identifient 7 principaux :
+- Travail non terminé : Il risque de devenir obsolète et de perdre de la valeur avec le temps.
+- Étapes inutiles dans le processus : Elles n’apportent aucune valeur au client, gaspillent des efforts et rallongent le délai de livraison.
+- Fonctionnalités superflues : Chaque ajout non essentiel représente une perte de temps et d’énergie.
+- Multitâche : Le passage constant d’une tâche à l’autre diminue la concentration et ralentit la progression.
+- Attente : Tout délai entre les étapes bloque la valeur en cours de création.
+- Transfert : Chaque transmission d'information entre équipe et outils ajoute des frictions ou des pertes d'informations.
+- Défauts : Les erreurs entraînent des retours en arrière coûteux et du temps perdu.
