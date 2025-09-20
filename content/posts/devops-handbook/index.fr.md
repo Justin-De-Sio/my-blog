@@ -33,7 +33,7 @@ Les organisations IT doivent répondre à deux besoins contradictoires :
 ## Three Ways, les bases du DevOps
 Le livre introduit "les trois voies" en français, qui sont le socle du DevOps et du Lean par ailleurs.
 
-### Le flux
+### Le flow
 
 ![flow](flow.png)
 
@@ -72,7 +72,7 @@ L’approche vise à réduire ces passations en :
 
 Cela permet d’améliorer le flux global en diminuant le temps que notre travail passe à attendre dans les files d’attente et en réduisant les erreurs de perte d'informations.
 
-#### Réduire les activités sans valeur ajoutée & Exterminer les contraintes
+#### Réduire les activités sans valeur ajoutée & exterminer les contraintes
 Dans le livre Implementing Lean Software Development: From Concept to Cash, Mary et Tom Poppendieck décrivent les déchets et contraintes dans le processus de développement applicatif comme tout ce qui ralentit le projet, c’est-à-dire les activités qui n’apportent aucune valeur au résultat final.
 
 Ils y en identifient 7 principaux :
@@ -83,3 +83,12 @@ Ils y en identifient 7 principaux :
 - Attente : Tout délai entre les étapes bloque la valeur en cours de création.
 - Transfert : Chaque transmission d'information entre équipe et outils ajoute des frictions ou des pertes d'informations.
 - Défauts : Les erreurs entraînent des retours en arrière coûteux et du temps perdu.
+
+### Le Feedback
+Plus vite on a un retour sur ce qu’on a fait, plus vite on peut le corriger.
+Il ne faut pas attendre que la fonctionnalité soit déjà entre les mains du client pour avoir du feedback. Il faut instaurer une boucle de feedback à chaque étape du processus. Si un problème est détecté, cela permet au développeur d’avoir la fonctionnalité encore fraîche dans sa tête : il n’a pas besoin de redécouvrir ce qu’il avait fait il y a deux mois.
+
+#### Le swarming
+Lorsqu’une étape est bloquée, nous devons concentrer davantage d’efforts sur cette tâche car les acteurs en aval du processus n'ont plus rien à faire. 
+
+### Apprentissage continue & experimentation
