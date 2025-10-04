@@ -1,10 +1,12 @@
+---
 title: "Comment je suis passé de 20% à 98% de disponibilité avec un serveur instable"
 summary: "Dans cet article, je raconte comment j’ai transformé un homelab fragile en un cluster Kubernetes résilient grâce à HAProxy, Keepalived, Longhorn et CloudNativePG, en supprimant les points de défaillance et en automatisant la reprise après panne."
 categories: ["Post", "Blog"]
 date: 2025-10-04
 draft: false
 repo: "[https://github.com/justin-de-sio/homelab](https://github.com/justin-de-sio/homelab)"
---------------------------------------------------------------------------------------------
+---
+
 
 # Comment je suis passé de 20 % à 98 % de disponibilité dans mon cluster K3s
 
