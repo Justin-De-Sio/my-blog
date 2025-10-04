@@ -8,8 +8,6 @@ repo: "[https://github.com/justin-de-sio/homelab](https://github.com/justin-de-s
 ---
 
 
-# Comment je suis passé de 20 % à 98 % de disponibilité dans mon cluster K3s
-
 Pendant longtemps mon homelab tournait sur un seul serveur DIY. Un petit setup simple et efficace : un nœud K3s, une base SQLite, quelques pods… pas très puissant, mais suffisant pour apprendre les bases.
 
 J’ai rapidement voulu aller plus loin. Mon objectif : expérimenter la haute disponibilité, le scheduling, la préemption et l’éviction, mieux répartir la charge et gagner en puissance de calcul. Je suis donc passé à un cluster K3s multi-nœuds. C’est là que les vrais problèmes ont commencé.
@@ -83,18 +81,15 @@ Avec cette VIP (192.168.1.8), j’ai désormais un point d’accès stable pour 
 graph TB
     CLIENT["kubectl client"]
     
-    subgraph "Proxmox Host p1"
-        LB1["K3S-LB01<br/>1C/2GB<br/>(Keepalived)"]
-        SRV1["K3S-SRV01<br/>6C/6GB<br/>server"]
+    subgraph "Proxmox Host 1"
+        LB1["K3S-LB01<br/>(HAProxy + Keepalived)"]
+        SRV1["K3S-SRV01<br/>Server Node"]
     end
     
-    subgraph "Proxmox Host p2"
-        LB2["K3S-LB02<br/>1C/2GB<br/>(Keepalived)"]
-        SRV2["K3S-SRV02<br/>6C/6GB<br/>server"]
-    end
-
-    subgraph "Ubuntu bare metal"
-        SRV3["K3S-SRV03<br/>4C/4GB<br/>server"]
+    subgraph "Proxmox Host 2"
+        LB2["K3S-LB02<br/>(HAProxy + Keepalived)"]
+        SRV2["K3S-SRV02<br/>Server Node"]
+        SRV3["K3S-SRV03<br/>Server Node"]
     end
 
     CLIENT --> VIP["VIP (Keepalived)"]
@@ -107,13 +102,13 @@ graph TB
     LB2 --> SRV2
     LB2 --> SRV3
 
-    style CLIENT fill:#e3f2fd
-    style VIP fill:#c8e6c9,stroke-dasharray: 5 5
-    style LB1 fill:#fff3e0
-    style LB2 fill:#fff3e0
-    style SRV1 fill:#e8f5e8
-    style SRV2 fill:#e8f5e8
-    style SRV3 fill:#e8f5e8
+    style CLIENT fill:#E3F2FD
+    style VIP fill:#C8E6C9,stroke-dasharray: 5 5
+    style LB1 fill:#FFF3E0
+    style LB2 fill:#FFF3E0
+    style SRV1 fill:#E8F5E8
+    style SRV2 fill:#E8F5E8
+    style SRV3 fill:#E8F5E8
 {{< /mermaid >}}
 
 ## 5. Protéger les données : Longhorn et CloudNativePG
