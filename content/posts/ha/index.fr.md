@@ -1,5 +1,5 @@
 ---
-title: "Comment je suis passé de 20% à 98% de disponibilité avec un serveur instable"
+title: "Homelab HA : de la panne à la résilience"
 summary: "Dans cet article, je raconte comment j’ai transformé un homelab fragile en un cluster Kubernetes résilient grâce à HAProxy, Keepalived, Longhorn et CloudNativePG, en supprimant les points de défaillance et en automatisant la reprise après panne."
 categories: ["Post", "Blog"]
 date: 2025-10-04
@@ -117,11 +117,8 @@ Après avoir stabilisé le réseau, il fallait garantir la disponibilité des do
 
 Pour la base de données, j’utilise CloudNativePG avec une instance PostgreSQL par nœud et un failover automatique si le primaire tombe. Les applications continuent d’accéder à la base sans interruption, même en cas de panne réseau.
 
-## 6. Scheduling intelligent et healthchecks
 
-Il restait des optimisations côté scheduling et vérification de l’état des services. J’ai ajusté les probes liveness/readiness, les stratégies d’affinité et d’antiaffinité, et les politiques de réassignment des pods pour éviter que des services critiques ne se retrouvent tous sur le même hôte. Ces réglages ont réduit les mouvements inutiles de pods et amélioré la stabilité générale.
-
-## 7. Les résultats
+## 6. Les résultats
 
 Depuis que j’ai ajouté HAProxy, Keepalived, Longhorn et CNPG : 
 * Mon cluster reste **accessible même quand un nœud tombe**. 
@@ -133,4 +130,4 @@ Aujourd’hui, je peux casser, tester, redéployer sans craindre qu’une panne 
 
 ## 8. Et maintenant ?
 
-Je prévois de remplacer la carte réseau défectueuse du premier mini-PC par une carte 10 Gbit et de le transformer en firewall/routeur. Je voudrais récupérer d’autres mini-PC pour atteindre au moins trois nœuds physiques réels, puis tester le chaos engineering pour simuler des pannes réseau et valider la résilience. Enfin, je continuerai à améliorer la tolérance aux pannes et la répartition de charge, tout en affinant les probes et les politiques de scheduling.
+Je prévois de remplacer la carte réseau défectueuse du premier mini-PC par une carte 10 Gbit et de le transformer en firewall/routeur. Je voudrais récupérer d’autres mini-PC pour atteindre au moins trois nœuds physiques réels, puis tester le chaos engineering pour simuler des pannes et valider la résilience. 
