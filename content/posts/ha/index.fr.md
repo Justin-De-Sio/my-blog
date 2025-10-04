@@ -79,7 +79,7 @@ Avec cette VIP (192.168.1.8), j’ai désormais un point d’accès stable pour 
 
 ### Architecture
 
-```mermaid
+{{< mermaid >}}
 graph TB
     CLIENT["kubectl client"]
     
@@ -114,7 +114,7 @@ graph TB
     style SRV1 fill:#e8f5e8
     style SRV2 fill:#e8f5e8
     style SRV3 fill:#e8f5e8
-```
+{{< /mermaid >}}
 
 ## 5. Protéger les données : Longhorn et CloudNativePG
 
