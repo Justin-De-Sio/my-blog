@@ -1,7 +1,6 @@
 ---
-
 title: "Pourquoi j'ai passé mon dimanche à galérer sur Arch Linux (et pourquoi j'ai adoré)"
-summary: ""
+summary: "Franchement, qui se réveille en se disant : « Tiens, et si je passais mon dimanche à souffrir volontairement devant un terminal pour installer une distribution Linux ultra-minimaliste ? »"
 categories: ["Post", "Blog"]
 tags: ["post"]
 #externalUrl: ""

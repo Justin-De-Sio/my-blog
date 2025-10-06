@@ -1,20 +1,21 @@
 ---
 title: "Homelab HA : de la panne à la résilience"
-summary: "Dans cet article, je raconte comment j’ai transformé un homelab fragile en un cluster Kubernetes résilient grâce à HAProxy, Keepalived, Longhorn et CloudNativePG, en supprimant les points de défaillance et en automatisant la reprise après panne."
+summary: "Dans cet article, je raconte comment j'ai transformé un homelab fragile en un cluster Kubernetes résilient grâce à HAProxy, Keepalived, Longhorn et CloudNativePG, en supprimant les points de défaillance et en automatisant la reprise après panne."
 categories: ["Post", "Blog"]
 date: 2025-10-04
 draft: false
-repo: "[https://github.com/justin-de-sio/homelab](https://github.com/justin-de-sio/homelab)"
+repo: "https://github.com/justin-de-sio/homelab"
+series: ["Homelab Chronicles"]
 ---
 
 
-Pendant longtemps mon homelab tournait sur un seul serveur DIY. Un petit setup simple et efficace : un nœud K3s, une base SQLite, quelques pods… pas très puissant, mais suffisant pour apprendre les bases.
+Pendant longtemps mon [homelab](/posts/homelab/) tournait sur un seul serveur DIY. Un petit setup simple et efficace : un nœud K3s, une base SQLite, quelques pods… pas très puissant, mais suffisant pour apprendre les bases.
 
-J’ai rapidement voulu aller plus loin. Mon objectif : expérimenter la haute disponibilité, le scheduling, la préemption et l’éviction, mieux répartir la charge et gagner en puissance de calcul. Je suis donc passé à un cluster K3s multi-nœuds. C’est là que les vrais problèmes ont commencé.
+J'ai rapidement voulu aller plus loin. Mon objectif : expérimenter la haute disponibilité, le scheduling, la préemption et l'éviction, mieux répartir la charge et gagner en puissance de calcul. Je suis donc passé à un cluster K3s multi-nœuds. C'est là que les vrais problèmes ont commencé.
 
 ## 1. Du mono-node au cluster distribué
 
-Au départ tout était sur une seule machine, sans réplication ni tolérance de panne. J’ai ajouté deux mini-PC pour obtenir un cluster K3s à trois nœuds : deux nœuds sur le premier mini-PC et un sur le second. Le but était d’apprendre à gérer etcd, Traefik et Longhorn. Très vite j’ai découvert les limites du matériel grand public : le premier mini-PC a eu une défaillance de carte réseau.
+Au départ tout était sur une seule machine, sans réplication ni tolérance de panne. J'ai ajouté deux mini-PC sous Proxmox pour obtenir un cluster K3s à trois nœuds : le serveur DIY initial (sous Ubuntu bare metal) continue d'héberger un nœud K3s tout en servant de NAS NFS, et chaque mini-PC héberge une VM K3s. Le but était d'apprendre à gérer etcd, Traefik et Longhorn. Très vite j'ai découvert les limites du matériel grand public : un des mini-PC a eu une défaillance de carte réseau.
 
 Ce défaut rendait le cluster extrêmement instable. Le nœud principal tombait régulièrement, et je devais parfois débrancher puis rebrancher le câble RJ45 pour rétablir la connexion. Autant dire que ce n’était pas de la haute disponibilité.
 
@@ -80,15 +81,18 @@ Avec cette VIP (192.168.1.8), j’ai désormais un point d’accès stable pour 
 {{< mermaid >}}
 graph TB
     CLIENT["kubectl client"]
-    
-    subgraph "Proxmox Host 1"
-        LB1["K3S-LB01<br/>(HAProxy + Keepalived)"]
-        SRV1["K3S-SRV01<br/>Server Node"]
+
+    subgraph "DIY Server (Ubuntu bare metal)"
+        SRV1["K3S-SRV01<br/>Server Node + NAS NFS"]
     end
-    
-    subgraph "Proxmox Host 2"
-        LB2["K3S-LB02<br/>(HAProxy + Keepalived)"]
+
+    subgraph "Proxmox Host 1 (Mini-PC)"
+        LB1["K3S-LB01<br/>(HAProxy + Keepalived)"]
         SRV2["K3S-SRV02<br/>Server Node"]
+    end
+
+    subgraph "Proxmox Host 2 (Mini-PC)"
+        LB2["K3S-LB02<br/>(HAProxy + Keepalived)"]
         SRV3["K3S-SRV03<br/>Server Node"]
     end
 
@@ -113,21 +117,21 @@ graph TB
 
 ## 5. Protéger les données : Longhorn et CloudNativePG
 
-Après avoir stabilisé le réseau, il fallait garantir la disponibilité des données. Avec Longhorn, j’ai configuré la réplication sur trois nœuds : chaque volume est copié sur plusieurs hôtes, ce qui permet de continuer à lire et écrire même si un nœud disparaît. Les réplicas se reconstruisent automatiquement quand le nœud revient.
+Après avoir stabilisé le réseau, il fallait garantir la disponibilité des données. Avec Longhorn, j'ai configuré la réplication sur trois nœuds : chaque volume est copié sur plusieurs hôtes, ce qui permet de continuer à lire et écrire même si un nœud disparaît. Les réplicas se reconstruisent automatiquement quand le nœud revient.
 
-Pour la base de données, j’utilise CloudNativePG avec une instance PostgreSQL par nœud et un failover automatique si le primaire tombe. Les applications continuent d’accéder à la base sans interruption, même en cas de panne réseau.
+Pour la base de données, j'ai migré de SQLite vers PostgreSQL. SQLite était parfait pour le setup mono-nœud initial, mais impossible à répliquer dans un cluster distribué. J'utilise maintenant CloudNativePG avec une instance PostgreSQL par nœud et un failover automatique si le primaire tombe. Les applications continuent d'accéder à la base sans interruption, même en cas de panne réseau.
 
 
 ## 6. Les résultats
 
-Depuis que j’ai ajouté HAProxy, Keepalived, Longhorn et CNPG : 
-* Mon cluster reste **accessible même quand un nœud tombe**. 
-* Les données restent **disponibles et cohérentes**. 
-* Je n’ai plus besoin de **toucher à l'ip de mon cluster**. 
+Depuis que j'ai ajouté HAProxy, Keepalived, Longhorn et CNPG :
+* Mon cluster reste **accessible même quand un nœud tombe**.
+* Les données restent **disponibles et cohérentes**.
+* Je n'ai plus besoin de **toucher à l'ip de mon cluster**.
 * Et ma disponibilité est passée de **20 % à environ 98 %**.
 
-Aujourd’hui, je peux casser, tester, redéployer sans craindre qu’une panne réseau ruine tout le cluster.
+Aujourd'hui, je peux casser, tester, redéployer sans craindre qu'une panne réseau ruine tout le cluster.
 
-## 8. Et maintenant ?
+## 7. Et maintenant ?
 
-Je prévois de remplacer la carte réseau défectueuse du premier mini-PC par une carte 10 Gbit et de le transformer en firewall/routeur. Je voudrais récupérer d’autres mini-PC pour atteindre au moins trois nœuds physiques réels, puis tester le chaos engineering pour simuler des pannes et valider la résilience. 
+Je prévois de remplacer la carte réseau défectueuse du mini-PC par une carte 10 Gbit et de le transformer en firewall/routeur. Je voudrais aussi récupérer un autre mini-PC pour migrer le serveur DIY vers Proxmox, ce qui me permettrait d'avoir trois hôtes Proxmox homogènes avec un nœud K3s par machine. Enfin, je compte tester le chaos engineering pour simuler des pannes et valider la résilience du cluster. 
